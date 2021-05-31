@@ -8,7 +8,7 @@ Fico feliz em poder participar do processo seletivo para a vaga de Web Designer!
 <ul>
 <li> Baixe o arquivo inteiro, sem alterar os locais/nome; </li>
 <li> Para acessar o arquivo, abra 'index.html'; </li>
-<li> É interessante usar o plug-in "Live Share" na sua IDE de preferência para acompanhar o código, caso deseje alterar algum dado inserido. </li>
+<li> É interessante usar o plug-in "Live Share" na sua IDE de preferência para ter uma melhor experiência. </li>
 </ul>
 
 <h3>O projeto foi desenvolvido com:</h3>
