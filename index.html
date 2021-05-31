@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navBar">
+            <img src="./img/favicon.png" alt="">
+            <div class="opcoesMenu">
+                <button onclick="abrirAba('block', 'none', 'botaoColaboradores', 'botaoClicado')" id="botaoClicado"
+                    class="botaoClicado">
+                    <div class="dashboard">
+                        <span class="iconify" data-icon="carbon:chart-line-smooth" data-inline="false"></span>
+                        <p class="opcaoMenu" id="dashboard">Dashboard</p>
+                    </div>
+                </button>
+                <button onclick="abrirAba('none', 'block', 'botaoClicado', 'botaoColaboradores')"
+                    id="botaoColaboradores">
+                    <div class="colaboradores">
+                        <span class="iconify" data-icon="bi:people" data-inline="false"></span>
+                        <p class="opcaoMenu" id="colaboradores">Colaboradores</p>
+                    </div>
+                </button>
+            </div>
+        </nav>
+
+        <main id="main">
+            <section id="informacoesPrincipais">
+                <section id="infos">
+                    <div id="graficoDia">
+                        <h3>HOJE</h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div id="dadosDia">
+                        <div id='informacaoExibida'>
+                            <p>passe o mouse no gráfico para ver o valor.</p>
+                            <span class="resultado">
+                                <p id="dadoExibir"></p>
+                            </span>
+                        </div>
+                        <div>
+                            <p>Total de colaboradores:</p>
+                            <span class="resultado">
+                                <p id="dadoColab"></p>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="calendario">
+                    <div id="meses">
+                        <ul>
+                            <li>JAN</li>
+                            <li>FEV</li>
+                            <li>MAR</li>
+                            <li>ABR</li>
+                            <li>MAI</li>
+                            <li>JUN</li>
+                            <li>JUL</li>
+                            <li>AGO</li>
+                            <li>SET</li>
+                            <li>OUT</li>
+                            <li>NOV</li>
+                            <li>DEZ</li>
+                        </ul>
+                    </div>
+
+                    <div id="informacoes">
+                        <ul class="menu">
+                            <button onclick="abrirInfo('menuPontos', 'menuAjustes', 'menuInconsistencias', 'menuDispositivos', 'menuAutorizacoes')">
+                                <li>Pontos</li>
+                            </button>
+                            <button onclick="abrirInfo('menuAjustes', 'menuPontos', 'menuInconsistencias', 'menuDispositivos', 'menuAutorizacoes')">
+                                <li>Ajustes</li>
+                            </button>
+                            <button onclick="abrirInfo('menuInconsistencias', 'menuAjustes', 'menuPontos', 'menuDispositivos', 'menuAutorizacoes')">
+                                <li>Inconsistências</li>
+                            </button>
+                            <button onclick="abrirInfo('menuDispositivos', 'menuInconsistencias', 'menuAjustes', 'menuPontos', 'menuAutorizacoes')">
+                                <li>Dispositivos</li>
+                            </button>
+                            <button onclick="abrirInfo('menuAutorizacoes', 'menuDispositivos', 'menuInconsistencias', 'menuAjustes', 'menuPontos')">
+                                <li>Autorizações</li>
+                            </button>
+                        </ul>
+
+                        <ul id="informacaoSelecionada">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="abaColaboradores">
+                <div class="barraPesquisa">
+                    <input type="text" id='pesquisa' placeholder="digite o nome de um colaborador">
+                    <button disabled type="submit">
+                        <span class="iconify searchIcon" data-icon="akar-icons:search" data-inline="false"></span>
+                    </button>
+                </div>
+
+                <div id="cardsColaboradores">
+                             
+                </div>
+            </section>
+
+            <section id="perfil">
+                <section id="perfilInicial">
+                    <div id="funcionariosCard">
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
